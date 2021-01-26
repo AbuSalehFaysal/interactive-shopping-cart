@@ -7,6 +7,7 @@ firstPlusButton.addEventListener("click", function () {
     document.getElementById("mobile-value").value = newMobileValue;
     let newMobilePriceNum = 1219 * newMobileValue;
     document.getElementById("mobile-price").innerText = newMobilePriceNum;
+    return newCoverPriceNum;
 });
 
 let firstMinusButton = document.getElementById("first-minus-button");
@@ -20,6 +21,7 @@ firstMinusButton.addEventListener("click", function () {
         let newMobilePriceNum = 1219 * newMobileValue;
         document.getElementById("mobile-price").innerText = newMobilePriceNum;
     }
+    return newMobilePriceNum;
 });
 
 let secondPlusButton = document.getElementById("second-plus-button");
@@ -29,6 +31,9 @@ secondPlusButton.addEventListener("click", function () {
     let newCoverValue = coverValueNum + 1;
     console.log(newCoverValue);
     document.getElementById("cover-value").value = newCoverValue;
+    let newCoverPriceNum = 59 * newCoverValue;
+    document.getElementById("cover-price").innerText = newCoverPriceNum;
+    return newCoverPriceNum;
 });
 
 let secondMinusButton = document.getElementById("second-minus-button");
@@ -39,5 +44,8 @@ secondMinusButton.addEventListener("click", function () {
         let newCoverValue = coverValueNum - 1;
         console.log(newCoverValue);
         document.getElementById("cover-value").value = newCoverValue;
+        let newCoverPriceNum = 59 * newCoverValue;
+        document.getElementById("cover-price").innerText = newCoverPriceNum;
     }
+    return newCoverPriceNum;
 });
