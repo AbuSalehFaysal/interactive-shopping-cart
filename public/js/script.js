@@ -5,6 +5,8 @@ firstPlusButton.addEventListener("click", function () {
     let newMobileValue = mobileValueNum + 1;
     console.log(newMobileValue);
     document.getElementById("mobile-value").value = newMobileValue;
+    let newMobilePriceNum = 1219 * newMobileValue;
+    document.getElementById("mobile-price").innerText = newMobilePriceNum;
 });
 
 let firstMinusButton = document.getElementById("first-minus-button");
@@ -15,6 +17,8 @@ firstMinusButton.addEventListener("click", function () {
         let newMobileValue = mobileValueNum - 1;
         console.log(newMobileValue);
         document.getElementById("mobile-value").value = newMobileValue;
+        let newMobilePriceNum = 1219 * newMobileValue;
+        document.getElementById("mobile-price").innerText = newMobilePriceNum;
     }
 });
 
