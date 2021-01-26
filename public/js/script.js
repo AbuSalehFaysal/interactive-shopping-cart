@@ -17,3 +17,23 @@ firstMinusButton.addEventListener("click", function () {
         document.getElementById("mobile-value").value = newMobileValue;
     }
 });
+
+let secondPlusButton = document.getElementById("second-plus-button");
+secondPlusButton.addEventListener("click", function () {
+    let coverValue = document.getElementById("cover-value").value;
+    let coverValueNum = parseFloat(coverValue);
+    let newCoverValue = coverValueNum + 1;
+    console.log(newCoverValue);
+    document.getElementById("cover-value").value = newCoverValue;
+});
+
+let secondMinusButton = document.getElementById("second-minus-button");
+secondMinusButton.addEventListener("click", function () {
+    let coverValue = document.getElementById("cover-value").value;
+    let coverValueNum = parseFloat(coverValue);
+    if (coverValueNum > 0) {
+        let newCoverValue = coverValueNum - 1;
+        console.log(newCoverValue);
+        document.getElementById("cover-value").value = newCoverValue;
+    }
+});
