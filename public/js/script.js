@@ -7,7 +7,11 @@ firstPlusButton.addEventListener("click", function () {
     document.getElementById("mobile-value").value = newMobileValue;
     let newMobilePriceNum = 1219 * newMobileValue;
     document.getElementById("mobile-price").innerText = newMobilePriceNum;
-    return newCoverPriceNum;
+    let coverPrice = document.getElementById("cover-price").innerText;
+    let coverPriceNum = parseFloat(coverPrice);
+    document.getElementById("sub-total").innerText = newMobilePriceNum + coverPriceNum;
+    document.getElementById("total").innerText = newMobilePriceNum + coverPriceNum;
+
 });
 
 let firstMinusButton = document.getElementById("first-minus-button");
@@ -20,8 +24,11 @@ firstMinusButton.addEventListener("click", function () {
         document.getElementById("mobile-value").value = newMobileValue;
         let newMobilePriceNum = 1219 * newMobileValue;
         document.getElementById("mobile-price").innerText = newMobilePriceNum;
+        let coverPrice = document.getElementById("cover-price").innerText;
+        let coverPriceNum = parseFloat(coverPrice);
+        document.getElementById("sub-total").innerText = newMobilePriceNum + coverPriceNum;
+        document.getElementById("total").innerText = newMobilePriceNum + coverPriceNum;
     }
-    return newMobilePriceNum;
 });
 
 let secondPlusButton = document.getElementById("second-plus-button");
@@ -33,7 +40,10 @@ secondPlusButton.addEventListener("click", function () {
     document.getElementById("cover-value").value = newCoverValue;
     let newCoverPriceNum = 59 * newCoverValue;
     document.getElementById("cover-price").innerText = newCoverPriceNum;
-    return newCoverPriceNum;
+    let mobilePrice = document.getElementById("mobile-price").innerText;
+    let mobilePriceNum = parseFloat(mobilePrice);
+    document.getElementById("sub-total").innerText = newCoverPriceNum + mobilePriceNum;
+    document.getElementById("total").innerText = newCoverPriceNum + mobilePriceNum;
 });
 
 let secondMinusButton = document.getElementById("second-minus-button");
@@ -46,6 +56,9 @@ secondMinusButton.addEventListener("click", function () {
         document.getElementById("cover-value").value = newCoverValue;
         let newCoverPriceNum = 59 * newCoverValue;
         document.getElementById("cover-price").innerText = newCoverPriceNum;
+        let mobilePrice = document.getElementById("mobile-price").innerText;
+        let mobilePriceNum = parseFloat(mobilePrice);
+        document.getElementById("sub-total").innerText = newCoverPriceNum + mobilePriceNum;
+        document.getElementById("total").innerText = newCoverPriceNum + mobilePriceNum;
     }
-    return newCoverPriceNum;
 });
